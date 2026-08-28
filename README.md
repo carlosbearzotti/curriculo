@@ -1,4 +1,4 @@
-<h1 align="center">Currículo/Portifólio interativo - Carlos Bearzotti</h1>
+<h1 align="center">Currículo/Portfólio interativo - Carlos Bearzotti</h1>
 
 ![Imagem do projeto finalizado](assets/images/projects/portFinal.png)
 

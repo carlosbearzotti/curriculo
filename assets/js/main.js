@@ -115,6 +115,52 @@ ScrollReveal({
   #contact header`
 );
 
+// Carregar e sincronizar tema salvo
+const savedTheme = localStorage.getItem("cv-theme");
+if (savedTheme === "light") {
+  document.body.classList.add("light-mode");
+  if (toggle) toggle.checked = true;
+}
+
 toggle.addEventListener("change", () => {
-  document.body.classList.toggle("light-mode");
+  const isLight = document.body.classList.toggle("light-mode");
+  localStorage.setItem("cv-theme", isLight ? "light" : "dark");
 });
+
+// Lógica de cópia com pop-up para a seção de contato
+function setupCopyButton(btnId, popupId, textToCopy) {
+  const btn = document.getElementById(btnId);
+  const popup = document.getElementById(popupId);
+  let timeout;
+
+  if (btn && popup) {
+    btn.addEventListener("click", async () => {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(textToCopy);
+        } else {
+          const textArea = document.createElement("textarea");
+          textArea.value = textToCopy;
+          textArea.style.position = "fixed";
+          textArea.style.left = "-999999px";
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          document.execCommand("copy");
+          textArea.remove();
+        }
+
+        popup.classList.add("show");
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          popup.classList.remove("show");
+        }, 2000);
+      } catch (err) {
+        console.error("Falha ao copiar:", err);
+      }
+    });
+  }
+}
+
+setupCopyButton("btnCopyMainEmail", "copyMainEmailPopup", "bearzotti.ce@gmail.com");
+setupCopyButton("btnCopyMainPhone", "copyMainPhonePopup", "+55 19 97422-6880");

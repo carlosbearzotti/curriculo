@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description"
+    content="Currículo de Carlos Eduardo Bearzotti da Silva - Desenvolvedor Júnior (Back-end, Front-end, Blockchain)" />
+  <meta name="author" content="Carlos Eduardo Bearzotti da Silva" />
+
+  <title>Currículo — Carlos Eduardo Bearzotti da Silva</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="../icons/favicon_copiar.png" type="image/x-icon" />
+
+  <style>
+    :root {
+      --hue: 0;
+      --primary: hsl(var(--hue), 92%, 43%);
+      --primary-hover: hsl(var(--hue), 92%, 33%);
+      --primary-light: hsla(var(--hue), 92%, 43%, 0.12);
+      --bg-page: hsl(0, 0%, 8%);
+      --bg-card: hsl(0, 0%, 5%);
+      --bg-card-alt: hsl(0, 0%, 10%);
+      --text-main: hsl(0, 0%, 100%);
+      --text-muted: hsla(0, 0%, 100%, 0.75);
+      --text-dim: hsla(0, 0%, 100%, 0.5);
+      --border-color: hsla(0, 0%, 100%, 0.1);
+      --border-hover: hsla(var(--hue), 92%, 43%, 0.5);
+      --badge-bg: hsla(var(--hue), 92%, 43%, 0.15);
+      --badge-text: hsl(var(--hue), 92%, 68%);
+      --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --transition: all 0.25s ease;
+    }
+
+    body.light-mode {
+      --primary: hsl(var(--hue), 92%, 43%);
+      --primary-hover: hsl(var(--hue), 92%, 33%);
+      --primary-light: hsla(var(--hue), 92%, 43%, 0.08);
+      --bg-page: rgb(241, 241, 241);
+      --bg-card: #ffffff;
+      --bg-card-alt: rgb(248, 248, 248);
+      --text-main: hsl(0, 0%, 0%);
+      --text-muted: rgb(32, 32, 32);
+      --text-dim: rgb(100, 100, 100);
+      --border-color: rgb(229, 229, 229);
+      --border-hover: hsla(var(--hue), 92%, 43%, 0.5);
+      --badge-bg: hsla(var(--hue), 92%, 43%, 0.1);
+      --badge-text: hsl(var(--hue), 92%, 40%);
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2rem 1rem 4rem;
+      transition: var(--transition);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Barra de Utilidades de Topo */
+    .action-bar-wrapper {
+      max-width: 900px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .action-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.1rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 1px solid transparent;
+      font-family: inherit;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--text-main);
+      border-color: var(--border-color);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Container Principal do Currículo */
+    .cv-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 2.75rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    /* Header do Currículo */
+    .cv-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .cv-name {
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+    }
+
+    .cv-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      list-style: none;
+      font-size: 0.925rem;
+    }
+
+    .contact-item a,
+    .copy-email-btn,
+    .copy-contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+      font-weight: 500;
+      font-size: 0.925rem;
+      font-family: inherit;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0.2rem 0.45rem;
+      margin: -0.2rem -0.45rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .contact-item a:hover,
+    .copy-email-btn:hover,
+    .copy-contact-btn:hover {
+      color: var(--primary);
+      background-color: var(--primary-light);
+    }
+
+    .contact-item svg,
+    .copy-email-btn svg,
+    .copy-contact-btn svg {
+      flex-shrink: 0;
+    }
+
+    .contact-item-copy {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .copy-icon {
+      opacity: 0.6;
+      transition: var(--transition);
+      margin-left: 0.15rem;
+    }
+
+    .copy-email-btn:hover .copy-icon,
+    .copy-contact-btn:hover .copy-icon {
+      opacity: 1;
+      color: var(--primary);
+    }
+
+    .copy-popup {
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      background-color: var(--primary);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    .copy-popup::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 5px 5px 0 5px;
+      border-style: solid;
+      border-color: var(--primary) transparent transparent transparent;
+    }
+
+    .copy-popup.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Seções */
+    .cv-section {
+      margin-bottom: 2.25rem;
+    }
+
+    .cv-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.45rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .section-heading svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .section-body {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .section-body p {
+      margin-bottom: 0.75rem;
+      line-height: 1.65;
+      text-align: justify;
+    }
+
+    .section-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Competências Técnicas */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+    }
+
+    .skill-category {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      background: var(--bg-card-alt);
+      padding: 0.85rem 1.1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .skill-category-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .skill-category-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Experiência Profissional */
+    .timeline-item {
+      position: relative;
+      padding-left: 1.4rem;
+      border-left: 2px solid var(--border-color);
+      margin-bottom: 1.8rem;
+      transition: var(--transition);
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--bg-card);
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .job-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .job-period {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--badge-bg);
+      padding: 0.15rem 0.55rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .job-stack {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      margin-bottom: 0.65rem;
+    }
+
+    .job-stack span {
+      color: var(--badge-text);
+    }
+
+    .job-summary {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .job-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .job-bullets li {
+      position: relative;
+      padding-left: 1.15rem;
+      font-size: 0.915rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      text-align: justify;
+    }
+
+    .job-bullets li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.1rem;
+      line-height: 1.3;
+    }
+
+    .job-bullets li strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    /* Formação Acadêmica & Outros */
+    .edu-item {
+      margin-bottom: 1rem;
+      background: var(--bg-card-alt);
+      padding: 0.85rem 1.1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .edu-meta {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    /* Rodapé da página */
+    .cv-footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* Responsividade para Telas Pequenas */
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem 0.5rem 2rem;
+      }
+
+      .cv-container {
+        padding: 1.5rem 1.15rem;
+      }
+
+      .cv-name {
+        font-size: 1.6rem;
+      }
+
+      .cv-title {
+        font-size: 1rem;
+      }
+
+      .action-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .action-group {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Barra de Ações Superior -->
+  <div class="action-bar-wrapper">
+    <div class="action-bar">
+      <div class="action-group">
+        <a href="../../index.html" class="btn btn-outline" id="btnBack" title="Retornar à página inicial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Voltar ao Portfólio
+        </a>
+      </div>
+
+      <div class="action-group">
+        <button id="btnTheme" class="btn btn-outline" title="Alternar tema claro/escuro" aria-label="Alternar tema">
+          <svg id="themeIconDark" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg id="themeIconLight" style="display: none;" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Documento Principal do Currículo -->
+  <main class="cv-container">
+    <!-- Cabeçalho -->
+    <header class="cv-header">
+      <h1 class="cv-name">Carlos Eduardo Bearzotti da Silva</h1>
+      <div class="cv-title">Desenvolvedor Júnior — Back-end · Front-end · Blockchain</div>
+
+      <ul class="contact-list">
+        <li class="contact-item contact-item-copy">
+          <button type="button" id="btnCopyEmail" class="copy-email-btn" title="Clique para copiar o e-mail" aria-label="Copiar e-mail: bearzotti.ce@gmail.com">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>bearzotti.ce@gmail.com</span>
+            <svg class="copy-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </button>
+          <span class="copy-popup" id="copyPopup">Copiado!</span>
+        </li>
+
+        <li class="contact-item contact-item-copy">
+          <button type="button" id="btnCopyPhone" class="copy-contact-btn"
+            title="Clique para copiar o número de WhatsApp" aria-label="Copiar WhatsApp: (19) 97422-6880">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>WhatsApp</span>
+            <svg class="copy-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </button>
+          <span class="copy-popup" id="copyPhonePopup">Copiado!</span>
+        </li>
+
+        <li class="contact-item">
+          <a href="https://linkedin.com/in/carloseduardobearzotti" target="_blank" rel="noopener noreferrer"
+            title="Perfil no LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
+        </li>
+
+        <li class="contact-item">
+          <a href="https://github.com/carlosbearzotti" target="_blank" rel="noopener noreferrer"
+            title="Perfil no GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- Perfil Profissional -->
+    <section class="cv-section">
+      <h2 class="section-heading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        Perfil Profissional
+      </h2>
+      <div class="section-body">
+        <p>
+          Desenvolvedor com forte atuação no ecossistema Web3, Blockchain e Full Stack, com experiência prática no
+          desenvolvimento de infraestruturas descentralizadas, construção de middlewares off-chain/on-chain, APIs REST
+          eficientes e integração de ecossistemas seguros. Graduando em Ciência da Computação, com base sólida em
+          engenharia de software, segurança de dados, metodologias ágeis e fundamentos aplicados de Ciência de Dados e
+          Machine Learning.
+        </p>
+      </div>
+    </section>
+
+    <!-- Competências Técnicas -->
+    <section class="cv-section">
+      <h2 class="section-heading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        Competências Técnicas
+      </h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-category-title">• Linguagens:</div>
+          <div class="skill-category-desc">Go (Golang), Solidity, TypeScript, JavaScript, Python, PHP, Java, C#</div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">• Blockchain & Web3:</div>
+          <div class="skill-category-desc">Smart contracts, otimização de gás, arquitetura de middlewares
+            off-chain/on-chain, Web3.js / Ethers.js, oráculos</div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">• Frontend:</div>
+          <div class="skill-category-desc">React.js, Tailwind CSS, Material UI, HTML5/CSS3</div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">• Backend & APIs:</div>
+          <div class="skill-category-desc">Node.js, Go (APIs REST/microsserviços), PHP (Yii Framework), arquitetura
+            orientada a eventos</div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">• Bancos de Dados:</div>
+          <div class="skill-category-desc">PostgreSQL, MySQL, MongoDB, SQLite</div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">• DevOps & Ferramentas:</div>
+          <div class="skill-category-desc">Docker, Git/GitHub (branching strategy, PRs), Jira/Trello (Kanban), Power BI,
+            Jupyter Notebooks / Google Colab</div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">• Dados & Machine Learning:</div>
+          <div class="skill-category-desc">Pandas, NumPy, Scikit-learn, TensorFlow</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiência Profissional -->
+    <section class="cv-section">
+      <h2 class="section-heading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        </svg>
+        Experiência Profissional
+      </h2>
+
+      <!-- Experiência 1 -->
+      <article class="timeline-item">
+        <div class="job-header">
+          <h3 class="job-title">Estagiário em Desenvolvimento Blockchain</h3>
+          <span class="job-period">Atualmente contratado</span>
+        </div>
+        <div class="job-stack">
+          <strong>Stack:</strong> <span>Go (Golang), Solidity, Node.js, TypeScript, Python, PostgreSQL, MongoDB, Docker,
+            Git</span>
+        </div>
+        <p class="job-summary">
+          Atuo no desenvolvimento de infraestruturas descentralizadas e aplicações Web3, com foco em middlewares de alta
+          performance, integração entre ambientes off-chain e redes on-chain, além da escrita e auditoria de smart
+          contracts.
+        </p>
+        <ul class="job-bullets">
+          <li><strong>Arquitetura & middlewares off-chain/on-chain:</strong> desenvolvimento de microsserviços e APIs
+            REST (Go e Node.js) para sincronização, monitoramento de eventos de rede e validação de dados entre
+            servidores tradicionais e a blockchain.</li>
+          <li><strong>Smart contracts:</strong> escrita, teste e implantação de contratos em Solidity, aplicando
+            otimização de gás e boas práticas de segurança para prevenção de vulnerabilidades.</li>
+          <li><strong>Integração de APIs & Web3:</strong> construção e consumo de endpoints para comunicação com nós da
+            rede, oráculos e carteiras digitais.</li>
+          <li><strong>Infraestrutura:</strong> uso de Docker para isolamento de ambientes de desenvolvimento, nós locais
+            de teste e implantação de microsserviços.</li>
+          <li><strong>Dados:</strong> modelagem e gestão de bancos relacionais e NoSQL para indexação eficiente do
+            histórico de transações e dados off-chain.</li>
+        </ul>
+      </article>
+
+      <!-- Experiência 2 -->
+      <article class="timeline-item">
+        <div class="job-header">
+          <h3 class="job-title">Estagiário em Desenvolvimento Web / Full Stack</h3>
+          <span class="job-period">5 meses</span>
+        </div>
+        <div class="job-stack">
+          <strong>Stack:</strong> <span>APIs REST, Node.js, PHP, Python, JavaScript, MySQL/PostgreSQL, Git</span>
+        </div>
+        <p class="job-summary">
+          Apoio estratégico durante transição de equipe. Reconhecido rapidamente pela proatividade e capacidade técnica,
+          assumi a liderança de um projeto estratégico focado em segurança, refatoração e integridade de APIs, atuando
+          no ciclo completo de desenvolvimento full stack — do backend e modelagem de dados até a integração no
+          frontend.
+        </p>
+        <ul class="job-bullets">
+          <li><strong>Liderança em segurança da API:</strong> responsável ponta a ponta por um projeto de segurança da
+            API da empresa, com refatoração de código e implementação de novos fluxos de autenticação e validação.</li>
+          <li><strong>Desenvolvimento full stack:</strong> atuação integrada em frontend, backend e modelagem de banco
+            de dados, com entregas diárias de alto impacto para a transição do time.</li>
+          <li><strong>Alinhamento técnico:</strong> participação ativa em reuniões de definição de escopo e arquitetura
+            técnica com supervisores e lideranças.</li>
+          <li><strong>Entregas ágeis:</strong> produção constante, com média de 5 a 7 cards semanais no Jira, sob
+            metodologia Kanban.</li>
+          <li><strong>Versionamento & code review:</strong> controle de versão via Git/GitHub, seguindo padrões de
+            branching strategy e revisão de código.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Formação Acadêmica -->
+    <section class="cv-section">
+      <h2 class="section-heading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+          <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+        </svg>
+        Formação Acadêmica
+      </h2>
+      <div class="edu-item">
+        <div class="edu-title">Ciência da Computação — Bacharelado</div>
+        <div class="edu-meta">Noturno • Previsão de conclusão: dez. 2026 (atualmente no 8º semestre)</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-title">Técnico em Química</div>
+        <div class="edu-meta">Integrado ao Ensino Médio</div>
+      </div>
+    </section>
+
+    <!-- Idiomas & Certificações -->
+    <section class="cv-section">
+      <h2 class="section-heading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        Idiomas & Certificações
+      </h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-category-title">• Inglês:</div>
+          <div class="skill-category-desc">Avançado — fluência para leitura de documentação técnica, escrita e
+            comunicação.</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">• Formação complementar:</div>
+          <div class="skill-category-desc">Cursos de especialização em desenvolvimento, algoritmos e infraestrutura
+            (Alura, Udemy, Cisco).</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cv-footer">
+    <p>© 2026 Carlos Eduardo Bearzotti da Silva • Currículo Profissional</p>
+  </footer>
+
+  <script>
+    // Gerenciamento de tema Claro / Escuro
+    const btnTheme = document.getElementById('btnTheme');
+    const iconDark = document.getElementById('themeIconDark');
+    const iconLight = document.getElementById('themeIconLight');
+
+    function updateThemeIcons(isLight) {
+      if (isLight) {
+        iconDark.style.display = 'none';
+        iconLight.style.display = 'block';
+      } else {
+        iconDark.style.display = 'block';
+        iconLight.style.display = 'none';
+      }
+    }
+
+    // Carregar tema salvo ou padrão do sistema
+    const savedTheme = localStorage.getItem('cv-theme');
+    if (savedTheme === 'light') {
+      document.body.classList.add('light-mode');
+      updateThemeIcons(true);
+    } else {
+      updateThemeIcons(false);
+    }
+
+    btnTheme.addEventListener('click', () => {
+      const isLight = document.body.classList.toggle('light-mode');
+      localStorage.setItem('cv-theme', isLight ? 'light' : 'dark');
+      updateThemeIcons(isLight);
+    });
+
+    // Lógica genérica de cópia com pop-up
+    function setupCopyButton(btnId, popupId, textToCopy) {
+      const btn = document.getElementById(btnId);
+      const popup = document.getElementById(popupId);
+      let timeout;
+
+      if (btn && popup) {
+        btn.addEventListener('click', async () => {
+          try {
+            if (navigator.clipboard && window.isSecureContext) {
+              await navigator.clipboard.writeText(textToCopy);
+            } else {
+              const textArea = document.createElement('textarea');
+              textArea.value = textToCopy;
+              textArea.style.position = 'fixed';
+              textArea.style.left = '-999999px';
+              document.body.appendChild(textArea);
+              textArea.focus();
+              textArea.select();
+              document.execCommand('copy');
+              textArea.remove();
+            }
+
+            popup.classList.add('show');
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+              popup.classList.remove('show');
+            }, 2000);
+          } catch (err) {
+            console.error('Falha ao copiar:', err);
+          }
+        });
+      }
+    }
+
+    setupCopyButton('btnCopyEmail', 'copyPopup', 'bearzotti.ce@gmail.com');
+    setupCopyButton('btnCopyPhone', 'copyPhonePopup', '(19) 97422-6880');
+  </script>
+</body>
+
+</html>

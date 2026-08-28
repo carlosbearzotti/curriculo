@@ -233,11 +233,11 @@ body nav#navigation .social-links li:nth-child(3) svg:hover path:nth-child(2) {
 }
 
 #contact li path,
-#navigation button.open-menu path[stroke*="#00856F"] {
+#navigation button.open-menu path {
   stroke: var(--primary-color);
 }
 
-#navigation.scroll button.open-menu path[stroke*="#00856F"] {
+#navigation.scroll button.open-menu path {
   stroke: var(--paragraph-2);
 }
 
@@ -777,34 +777,102 @@ body.menu-expanded button path {
 }
 
 #contact ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
   margin-bottom: 2rem;
 }
 
+#contact ul li,
+#contact ul li.contact-item-copy {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+}
+
 #contact ul a,
+#contact ul button.contact-copy-btn,
 #about .content a:nth-child(2) {
   width: fit-content;
-
   text-decoration: none;
-
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 1rem;
-
-  padding: 1rem;
+  padding: 0.8rem 1.4rem;
   border-radius: 0.8rem;
-
   transition: 300ms;
 }
 
-#contact ul a {
+#contact ul a,
+#contact ul button.contact-copy-btn {
   color: var(--paragraph);
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-#contact ul a:hover {
+#contact ul a:hover,
+#contact ul button.contact-copy-btn:hover {
   background: var(--third-color);
+  color: var(--headline);
 }
 
-#contact a path {
+#contact ul button.contact-copy-btn .copy-icon {
+  opacity: 0.6;
+  transition: 200ms;
+  margin-left: 0.2rem;
+}
+
+#contact ul button.contact-copy-btn:hover .copy-icon {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+#contact .copy-popup {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+#contact .copy-popup::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px 5px 0 5px;
+  border-style: solid;
+  border-color: var(--primary-color) transparent transparent transparent;
+}
+
+#contact .copy-popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+#contact a path,
+#contact button path {
   transition: 400ms;
 }
 
@@ -816,11 +884,13 @@ body.menu-expanded button path {
   fill: #fff;
 }
 
-#contact ul li:nth-child(2) a img {
+#contact ul li:nth-child(2) a img,
+#contact ul li:nth-child(2) button img {
   rotate: -15deg;
 }
 
-#contact ul li:nth-child(2) a path {
+#contact ul li:nth-child(2) a path,
+#contact ul li:nth-child(2) button path {
   stroke: none;
 }
 
