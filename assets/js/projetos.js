@@ -5,9 +5,9 @@ function projetos(section) {
     <div class="content">
 
         <div class="card">
-          <h3>EducaChain — UNICEF Challenge 2026</h3>
+          <h3>UnicefChallenge</h3>
           <div class="img-wrapper">
-            <img src="./assets/images/projects/UNICEF_Logo.png.jpg" alt="Logo do projeto EducaChain para o UNICEF Challenge" style="max-width: 50%; height: auto;" />
+            <img src="./assets/images/projects/UNICEF_Logo.png.jpg" alt="Logo do projeto UnicefChallenge" style="max-width: 50%; height: auto;" />
             <div class="buttons">
               <a href="https://github.com/carlosbearzotti/unicefChallenge" target="_blank" rel="noopener noreferrer" title="Repositório no Github">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -17,8 +17,42 @@ function projetos(section) {
               </a>
             </div>
           </div>
-          <p>Blockchain como infraestrutura social: certificação onchain (ERC-1155), token de incentivo EDU (ERC-20), controle de qualidade do ensino e auditoria imutável — projeto para o UNICEF Challenge 2026.</p>
-          <p>Solidity - Hardhat - JavaScript - ERC-1155 - ERC-20</p>
+          <p>Desenvolvimento de um sistema de pontuação escolar e tokenomics estruturado com contratos inteligentes. Implementação de regras de ranqueamento e distribuição de recompensas, aplicando os padrões ERC-20 (para tokens fungíveis/pontuação) e ERC-1155 (para gestão otimizada de múltiplos ativos e conquistas), focados na gamificação educacional.</p>
+          <p>Solidity - Padrão ERC-1155 e ERC-20 - Smart Contracts</p>
+        </div>
+
+        <div class="card">
+          <h3>Integrados Fintech (Arquitetura Hub & Spoke)</h3>
+          <div class="img-wrapper">
+            <img src="./assets/images/Languages/Java.png" alt="Ícone Java Spring Boot 3" style="width: 8rem; height: 8rem; object-fit: contain; margin: 1.5rem auto; display: block;" />
+            <div class="buttons">
+              <a href="https://github.com/carlosbearzotti/INTEGRATE_SERVICES_JAVA_API" target="_blank" rel="noopener noreferrer" title="Repositório no Github">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z" fill="rgba(255,255,255,1)"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <p>Refatoração e documentação de uma arquitetura para um hub bancário multi-tenant. Integração de ambientes, modelagem de dados e controle de versionamento do banco de dados utilizando migrations com Flyway.</p>
+          <p>Java - Spring Boot 3 - PostgreSQL - Node.js - Flyway</p>
+        </div>
+
+        <div class="card">
+          <h3>Trabalho de Conclusão de Curso (TCC): Ecossistema de Gestão de Restaurantes e Delivery</h3>
+          <div class="img-wrapper">
+            <img src="./assets/images/Languages/python.png" alt="Ícone Python" style="width: 8rem; height: 8rem; object-fit: contain; margin: 1.5rem auto; display: block;" />
+            <div class="buttons">
+              <a href="https://github.com/carlosbearzotti/TCC_DEMO" target="_blank" rel="noopener noreferrer" title="Repositório no Github">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z" fill="rgba(255,255,255,1)"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <p>Desenvolvimento de uma plataforma ponta a ponta (inspirada no modelo Anota Ai), integrando o sistema de gestão do estabelecimento com uma aplicação dedicada para a logística de entregadores. Estruturação avançada de schemas de banco de dados para suportar o ciclo completo do pedido, turnos, rastreamento de entregas e rotinas de logs de auditoria.</p>
+          <p>Python - PostgreSQL - Bancos Relacionais - APIs REST</p>
         </div>
 
         <div class="card">

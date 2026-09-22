@@ -782,10 +782,13 @@ body.menu-expanded button path {
   align-items: flex-start;
   gap: 1rem;
   margin-bottom: 2rem;
+  padding: 0;
+  list-style: none;
 }
 
 #contact ul li,
-#contact ul li.contact-item-copy {
+#contact ul li.contact-item-copy,
+#contact ul li.contact-item-location {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -794,25 +797,31 @@ body.menu-expanded button path {
 
 #contact ul a,
 #contact ul button.contact-copy-btn,
+#contact ul .contact-location-info,
 #about .content a:nth-child(2) {
   width: fit-content;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
   padding: 0.8rem 1.4rem;
   border-radius: 0.8rem;
   transition: 300ms;
 }
 
 #contact ul a,
-#contact ul button.contact-copy-btn {
+#contact ul button.contact-copy-btn,
+#contact ul .contact-location-info {
   color: var(--paragraph);
   background: transparent;
   border: none;
   font-family: inherit;
   font-size: 1.6rem;
   font-weight: 500;
+}
+
+#contact ul a,
+#contact ul button.contact-copy-btn {
   cursor: pointer;
 }
 
@@ -820,6 +829,13 @@ body.menu-expanded button path {
 #contact ul button.contact-copy-btn:hover {
   background: var(--third-color);
   color: var(--headline);
+}
+
+#contact ul svg,
+#contact ul img {
+  width: 2.4rem;
+  height: 2.4rem;
+  flex-shrink: 0;
 }
 
 #contact ul button.contact-copy-btn .copy-icon {
@@ -884,14 +900,13 @@ body.menu-expanded button path {
   fill: #fff;
 }
 
-#contact ul li:nth-child(2) a img,
-#contact ul li:nth-child(2) button img {
+#contact ul img#cel {
   rotate: -15deg;
 }
 
-#contact ul li:nth-child(2) a path,
-#contact ul li:nth-child(2) button path {
-  stroke: none;
+#contact .contact-gmail-icon path,
+#contact #btnCopyMainEmail svg:first-child path {
+  stroke: #EA4335 !important;
 }
 
 #contact .col-b {

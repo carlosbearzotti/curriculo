@@ -459,6 +459,36 @@
       margin-top: 0.2rem;
     }
 
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-sm);
+      background: var(--badge-bg);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .project-link:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .location-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.925rem;
+    }
+
     /* Rodapé da página */
     .cv-footer {
       text-align: center;
@@ -494,6 +524,51 @@
         justify-content: center;
       }
     }
+
+    /* Estilos para Impressão e Exportação PDF */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+      }
+
+      .action-bar-wrapper,
+      .cv-footer {
+        display: none !important;
+      }
+
+      .cv-container {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0.5rem 1rem !important;
+        max-width: 100% !important;
+      }
+
+      .cv-header {
+        border-bottom-color: #222 !important;
+      }
+
+      .section-heading {
+        border-bottom-color: #ddd !important;
+        color: #111 !important;
+      }
+
+      .timeline-item::before {
+        box-shadow: none !important;
+      }
+
+      .timeline-item,
+      .cv-section,
+      .edu-item,
+      .skill-category {
+        break-inside: avoid;
+      }
+
+      .project-link {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 
@@ -513,6 +588,15 @@
       </div>
 
       <div class="action-group">
+        <button id="btnPrint" class="btn btn-outline" title="Imprimir currículo ou salvar em PDF" aria-label="Imprimir currículo">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          Imprimir / PDF
+        </button>
+
         <button id="btnTheme" class="btn btn-outline" title="Alternar tema claro/escuro" aria-label="Alternar tema">
           <svg id="themeIconDark" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -543,6 +627,17 @@
       <div class="cv-title">Desenvolvedor Júnior — Back-end · Front-end · Blockchain</div>
 
       <ul class="contact-list">
+        <li class="contact-item">
+          <span class="location-tag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Campinas – SP
+          </span>
+        </li>
+
         <li class="contact-item contact-item-copy">
           <button type="button" id="btnCopyEmail" class="copy-email-btn" title="Clique para copiar o e-mail" aria-label="Copiar e-mail: bearzotti.ce@gmail.com">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
@@ -619,11 +714,7 @@
       </h2>
       <div class="section-body">
         <p>
-          Desenvolvedor com forte atuação no ecossistema Web3, Blockchain e Full Stack, com experiência prática no
-          desenvolvimento de infraestruturas descentralizadas, construção de middlewares off-chain/on-chain, APIs REST
-          eficientes e integração de ecossistemas seguros. Graduando em Ciência da Computação, com base sólida em
-          engenharia de software, segurança de dados, metodologias ágeis e fundamentos aplicados de Ciência de Dados e
-          Machine Learning.
+          Graduando em Ciência da Computação, com base sólida em engenharia de software, segurança de dados, metodologias ágeis e fundamentos aplicados de Ciência de Dados. Desenvolvedor com forte atuação no ecossistema Web3, Blockchain e Full Stack, com experiência prática no desenvolvimento de infraestruturas descentralizadas, construção de middlewares off-chain/on-chain, APIs REST eficientes e integração de ecossistemas seguros.
         </p>
       </div>
     </section>
@@ -641,7 +732,7 @@
       <div class="skills-grid">
         <div class="skill-category">
           <div class="skill-category-title">• Linguagens:</div>
-          <div class="skill-category-desc">Go (Golang), Solidity, TypeScript, JavaScript, Python, PHP, Java, C#</div>
+          <div class="skill-category-desc">Go (Golang), Java, Solidity, Python, PHP, TypeScript, JavaScript</div>
         </div>
 
         <div class="skill-category">
@@ -676,6 +767,11 @@
           <div class="skill-category-title">• Dados & Machine Learning:</div>
           <div class="skill-category-desc">Pandas, NumPy, Scikit-learn, TensorFlow</div>
         </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">• Testes:</div>
+          <div class="skill-category-desc">JUnit, Mockito.</div>
+        </div>
       </div>
     </section>
 
@@ -694,17 +790,12 @@
       <article class="timeline-item">
         <div class="job-header">
           <h3 class="job-title">Estagiário em Desenvolvimento Blockchain</h3>
-          <span class="job-period">Atualmente contratado</span>
+          <span class="job-period">Jan.2026 - Atual</span>
         </div>
         <div class="job-stack">
           <strong>Stack:</strong> <span>Go (Golang), Solidity, Node.js, TypeScript, Python, PostgreSQL, MongoDB, Docker,
             Git</span>
         </div>
-        <p class="job-summary">
-          Atuo no desenvolvimento de infraestruturas descentralizadas e aplicações Web3, com foco em middlewares de alta
-          performance, integração entre ambientes off-chain e redes on-chain, além da escrita e auditoria de smart
-          contracts.
-        </p>
         <ul class="job-bullets">
           <li><strong>Arquitetura & middlewares off-chain/on-chain:</strong> desenvolvimento de microsserviços e APIs
             REST (Go e Node.js) para sincronização, monitoramento de eventos de rede e validação de dados entre
@@ -724,20 +815,14 @@
       <article class="timeline-item">
         <div class="job-header">
           <h3 class="job-title">Estagiário em Desenvolvimento Web / Full Stack</h3>
-          <span class="job-period">5 meses</span>
+          <span class="job-period">Nov. 2024 – Abr. 2025</span>
         </div>
         <div class="job-stack">
           <strong>Stack:</strong> <span>APIs REST, Node.js, PHP, Python, JavaScript, MySQL/PostgreSQL, Git</span>
         </div>
-        <p class="job-summary">
-          Apoio estratégico durante transição de equipe. Reconhecido rapidamente pela proatividade e capacidade técnica,
-          assumi a liderança de um projeto estratégico focado em segurança, refatoração e integridade de APIs, atuando
-          no ciclo completo de desenvolvimento full stack — do backend e modelagem de dados até a integração no
-          frontend.
-        </p>
         <ul class="job-bullets">
-          <li><strong>Liderança em segurança da API:</strong> responsável ponta a ponta por um projeto de segurança da
-            API da empresa, com refatoração de código e implementação de novos fluxos de autenticação e validação.</li>
+          <li><strong>Segurança da API:</strong> responsável ponta a ponta por um projeto de segurança da API da empresa,
+            com refatoração de código e implementação de novos fluxos de autenticação e validação.</li>
           <li><strong>Desenvolvimento full stack:</strong> atuação integrada em frontend, backend e modelagem de banco
             de dados, com entregas diárias de alto impacto para a transição do time.</li>
           <li><strong>Alinhamento técnico:</strong> participação ativa em reuniões de definição de escopo e arquitetura
@@ -746,6 +831,96 @@
             metodologia Kanban.</li>
           <li><strong>Versionamento & code review:</strong> controle de versão via Git/GitHub, seguindo padrões de
             branching strategy e revisão de código.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Projetos em Destaque -->
+    <section class="cv-section">
+      <h2 class="section-heading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+        Projetos em Destaque
+      </h2>
+
+      <!-- Projeto 1: UnicefChallenge -->
+      <article class="timeline-item">
+        <div class="job-header">
+          <h3 class="job-title">UnicefChallenge</h3>
+          <a href="https://github.com/carlosbearzotti/unicefChallenge" target="_blank" rel="noopener noreferrer"
+            class="project-link" title="Repositório no GitHub">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            GitHub
+          </a>
+        </div>
+        <div class="job-stack">
+          <strong>Stack:</strong> <span>Solidity, Padrão ERC-1155 e ERC-20, Smart Contracts</span>
+        </div>
+        <ul class="job-bullets">
+          <li>Desenvolvimento de um sistema de pontuação escolar e tokenomics estruturado com contratos inteligentes.</li>
+          <li>Implementação de regras de ranqueamento e distribuição de recompensas, aplicando os padrões ERC-20 (para
+            tokens fungíveis/pontuação) e ERC-1155 (para gestão otimizada de múltiplos ativos e conquistas), focados na
+            gamificação educacional.</li>
+        </ul>
+      </article>
+
+      <!-- Projeto 2: Integrados Fintech -->
+      <article class="timeline-item">
+        <div class="job-header">
+          <h3 class="job-title">Integrados Fintech (Arquitetura Hub & Spoke)</h3>
+          <a href="https://github.com/carlosbearzotti/INTEGRATE_SERVICES_JAVA_API" target="_blank"
+            rel="noopener noreferrer" class="project-link" title="Repositório no GitHub">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            GitHub
+          </a>
+        </div>
+        <div class="job-stack">
+          <strong>Stack:</strong> <span>Java, Spring Boot 3, PostgreSQL, Node.js, Flyway</span>
+        </div>
+        <ul class="job-bullets">
+          <li>Refatoração e documentação de uma arquitetura para um hub bancário multi-tenant.</li>
+          <li>Integração de ambientes, modelagem de dados e controle de versionamento do banco de dados utilizando
+            migrations com Flyway.</li>
+        </ul>
+      </article>
+
+      <!-- Projeto 3: TCC Restaurantes e Delivery -->
+      <article class="timeline-item">
+        <div class="job-header">
+          <h3 class="job-title">Trabalho de Conclusão de Curso (TCC): Ecossistema de Gestão de Restaurantes e Delivery</h3>
+          <a href="https://github.com/carlosbearzotti/TCC_DEMO" target="_blank" rel="noopener noreferrer"
+            class="project-link" title="Repositório no GitHub">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            GitHub
+          </a>
+        </div>
+        <div class="job-stack">
+          <strong>Stack:</strong> <span>Python, PostgreSQL, Bancos Relacionais</span>
+        </div>
+        <ul class="job-bullets">
+          <li>Desenvolvimento de uma plataforma ponta a ponta (inspirada no modelo Anota Ai), integrando o sistema de
+            gestão do estabelecimento com uma aplicação dedicada para a logística de entregadores.</li>
+          <li>Estruturação avançada de schemas de banco de dados para suportar o ciclo completo do pedido, desde a
+            receção até à entrega final.</li>
+          <li>Criação de tabelas e fluxos para controle de turnos, rastreamento de entregas e implementação de rotinas de
+            logs de auditoria para garantir a integridade, a segurança e o monitoramento rigoroso dos dados.</li>
         </ul>
       </article>
     </section>
@@ -784,8 +959,7 @@
       <div class="skills-grid">
         <div class="skill-category">
           <div class="skill-category-title">• Inglês:</div>
-          <div class="skill-category-desc">Avançado — fluência para leitura de documentação técnica, escrita e
-            comunicação.</div>
+          <div class="skill-category-desc">Avançado — leitura de documentação técnica, escrita e comunicação</div>
         </div>
         <div class="skill-category">
           <div class="skill-category-title">• Formação complementar:</div>
@@ -823,6 +997,13 @@
       updateThemeIcons(true);
     } else {
       updateThemeIcons(false);
+    }
+
+    const btnPrint = document.getElementById('btnPrint');
+    if (btnPrint) {
+      btnPrint.addEventListener('click', () => {
+        window.print();
+      });
     }
 
     btnTheme.addEventListener('click', () => {
